@@ -1,5 +1,4 @@
 import math
-import random
 
 words_hard = ["abbreviate",
 "abdication",
