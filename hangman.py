@@ -31,7 +31,6 @@ words_easy = ["ask",
 "web",
 "arm",
 ]
-
 def hangman(word):
     wrong = 0
     stages = ["",
@@ -54,35 +53,23 @@ def hangman(word):
         print(rletters)
         char = input(msg)
         
-       
-       
-       
         if char in rletters:
             guess = rletters.index(char)
             board[guess] = char
             rletters[guess] = "$"
-        
-        
-        
         else:
             wrong += 1
-
-
 
 
         print("".join(board))
         e = wrong + 1
         print("\n".join(stages[0:e]))
-        
-        
-        
+  
         if "_" not in board:
             print("you won. the word is:")
             print("".join(board))
             win = True
             break
-    
-    
     
     if not win:
         print("\n".join(stages[0:wrong]))
@@ -104,10 +91,4 @@ def start():
         print("!!!!Type difficult mode!!!!!")
         start()
         
-
-    
-
-
-
-
 start()
